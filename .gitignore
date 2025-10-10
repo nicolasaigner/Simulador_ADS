@@ -1,2 +1,6 @@
-*.zip
-.idea
+node_modules/
+.env
+.DS_Store
+*.log
+Simulador_ADS.zip
+

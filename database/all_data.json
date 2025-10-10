@@ -1,7 +1,14 @@
 {
+  "version": "1.0.0",
+  "lastUpdated": "2025-10-10T01:03:40.459Z",
+  "totalCourses": 8,
   "courses": [
     {
+      "id": 1,
       "course": "Arquitetura de Sistemas",
+      "slug": "arquitetura-de-sistemas",
+      "totalQuizQuestions": 50,
+      "totalExamQuestions": 11,
       "data": {
         "quizzes": [
           {
@@ -1237,7 +1244,11 @@
       }
     },
     {
+      "id": 2,
       "course": "Aspectos Legais da Tecnologia da Informação",
+      "slug": "aspectos-legais-da-tecnologia-da-informacao",
+      "totalQuizQuestions": 0,
+      "totalExamQuestions": 65,
       "data": {
         "quizzes": [],
         "exams": [
@@ -2564,7 +2575,11 @@
       }
     },
     {
+      "id": 3,
       "course": "Empreendorismo",
+      "slug": "empreendorismo",
+      "totalQuizQuestions": 26,
+      "totalExamQuestions": 0,
       "data": {
         "quizzes": [
           {
@@ -3106,7 +3121,11 @@
       }
     },
     {
+      "id": 4,
       "course": "Fundamentos de Redes de Computadores",
+      "slug": "fundamentos-de-redes-de-computadores",
+      "totalQuizQuestions": 37,
+      "totalExamQuestions": 0,
       "data": {
         "quizzes": [
           {
@@ -3901,7 +3920,11 @@
       }
     },
     {
+      "id": 5,
       "course": "Gestão de Projetos de Software",
+      "slug": "gestao-de-projetos-de-software",
+      "totalQuizQuestions": 14,
+      "totalExamQuestions": 0,
       "data": {
         "quizzes": [
           {
@@ -4199,7 +4222,11 @@
       }
     },
     {
+      "id": 6,
       "course": "Gestão de Qualidade de Software",
+      "slug": "gestao-de-qualidade-de-software",
+      "totalQuizQuestions": 22,
+      "totalExamQuestions": 0,
       "data": {
         "quizzes": [
           {
@@ -4649,7 +4676,11 @@
       }
     },
     {
+      "id": 7,
       "course": "Governança de Tecnologia da Informação",
+      "slug": "governanca-de-tecnologia-da-informacao",
+      "totalQuizQuestions": 30,
+      "totalExamQuestions": 0,
       "data": {
         "quizzes": [
           {
@@ -5267,7 +5298,11 @@
       }
     },
     {
+      "id": 8,
       "course": "Segurança da Informação",
+      "slug": "seguranca-da-informacao",
+      "totalQuizQuestions": 41,
+      "totalExamQuestions": 0,
       "data": {
         "quizzes": [
           {
