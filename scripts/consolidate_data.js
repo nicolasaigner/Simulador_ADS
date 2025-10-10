@@ -16,24 +16,53 @@ const courseNameMap = {
   'Segurança da Informação - Atividades': 'Segurança da Informação'
 };
 
+// Função para extrair imagem do HTML da questão
+function extractImageFromHTML(text) {
+  if (!text) return null;
+
+  // Procurar por tags <img src='...'> ou <img src="...">
+  const imgRegex = /<img\s+src=['"](.*?)['"]/i;
+  const match = text.match(imgRegex);
+
+  if (match && match[1]) {
+    // Normalizar o caminho da imagem
+    let imagePath = match[1];
+    // Remover ./ do início se existir
+    imagePath = imagePath.replace(/^\.\//, '');
+    // Converter para formato consistente
+    imagePath = imagePath.replace(/\\/g, '/');
+    return imagePath;
+  }
+
+  return null;
+}
+
 function processObjectiveQuestions(questions) {
-  return questions.map(q => ({
-    question: q.question,
-    type: 'objective',
-    options: q.options || [],
-    answer: q.Resposta || q.answer || '',
-    image: q.image || null
-  }));
+  return questions.map(q => {
+    const image = q.image || extractImageFromHTML(q.question);
+
+    return {
+      question: q.question,
+      type: 'objective',
+      options: q.options || [],
+      answer: q.Resposta || q.answer || '',
+      image: image
+    };
+  });
 }
 
 function processDiscursiveQuestions(questions) {
-  return questions.map(q => ({
-    question: q.question,
-    type: 'discursive',
-    options: [],
-    answer: q.Resposta || q.answer || '',
-    image: q.image || null
-  }));
+  return questions.map(q => {
+    const image = q.image || extractImageFromHTML(q.question) || extractImageFromHTML(q.Resposta);
+
+    return {
+      question: q.question,
+      type: 'discursive',
+      options: [],
+      answer: q.Resposta || q.answer || '',
+      image: image
+    };
+  });
 }
 
 function processCourseFolder(folderPath, courseName) {

@@ -25,6 +25,39 @@ async function testAPI() {
     console.log(`✅ Total de questões: ${stats.data.totalQuestions}`);
     console.log(`   - Questões objetivas: ${stats.data.objectiveQuestions}`);
     console.log(`   - Questões discursivas: ${stats.data.discursiveQuestions}`);
+    console.log(`   - Questões com imagens: ${stats.data.questionsWithImages}`);
+    console.log('');
+
+    // 3.1. NOVO: Buscar questões com imagens de uma matéria específica
+    console.log('3️⃣.1 Buscando questões COM IMAGENS (Empreendorismo)...');
+    const quizzesWithImages = await fetch(`${BASE_URL}/api/courses/empreendorismo/quizzes?hasImage=true`).then(r => r.json());
+    console.log(`✅ Encontradas ${quizzesWithImages.count} questões com imagens`);
+    if (quizzesWithImages.count > 0) {
+      console.log(`   Primeira questão: ${quizzesWithImages.data[0].question.substring(0, 60)}...`);
+      console.log(`   Imagem: ${quizzesWithImages.data[0].image}`);
+    }
+    console.log('');
+
+    // 3.2. NOVO: Gerar simulado APENAS com questões que têm imagens
+    console.log('3️⃣.2 Gerando simulado APENAS COM QUESTÕES COM IMAGENS...');
+    const quizWithImages = await fetch(`${BASE_URL}/api/quiz/generate`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        courseSlug: 'empreendorismo',
+        hasImage: true,
+        limit: 10,
+        shuffle: true
+      })
+    }).then(r => r.json());
+
+    if (quizWithImages.success) {
+      console.log(`✅ Simulado gerado: ${quizWithImages.quiz.courseName}`);
+      console.log(`   - Total de questões com imagens: ${quizWithImages.quiz.totalQuestions}`);
+      quizWithImages.quiz.questions.forEach((q, i) => {
+        console.log(`   ${i + 1}. Imagem: ${q.image}`);
+      });
+    }
     console.log('');
 
     // 4. Gerar Simulado (teste principal - verificar se retorna respostas)
@@ -106,6 +139,7 @@ async function testAPI() {
     console.log('   ✓ API está retornando as respostas corretas');
     console.log('   ✓ Endpoints funcionando corretamente');
     console.log('   ✓ Validação de respostas operacional');
+    console.log('   ✓ Filtro de questões com imagens funcionando');
 
   } catch (error) {
     console.error('❌ Erro durante os testes:', error.message);

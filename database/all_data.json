@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2025-10-10T01:03:40.459Z",
+  "lastUpdated": "2025-10-10T01:18:12.819Z",
   "totalCourses": 8,
   "courses": [
     {
@@ -3107,7 +3107,7 @@
             "type": "discursive",
             "options": [],
             "answer": "As inovações são as responsáveis pelo avanço da sociedade. Algumas causam impactos tão grandes que são capazes de transformar o mundo e estabelecer novos processos, enquanto outras são mais discretas, porém, igualmente indispensáveis para a manutenção da sociedade e a constante evolução do mercado. Os três tipos de inovação são: Inovação revolucionária, que se refere a inovações disruptivas que criam novas indústrias ou transformam significativamente as existentes, trazendo soluções que mudam radicalmente o mercado. Esse tipo de inovação é mais exclusivo porém possui um impacto grande e duradouro na sociedade, um bom exemplo desse tipo de inovação é a criação do automóvel e da internet. Já a inovação tecnológica envolve o desenvolvimento de novas tecnologias ou a aplicação das tecnologias existentes de maneiras novas para criar produtos ou processos inovadores. Essas inovações tem uma exclusividade média e são essenciais para que um produto ou serviço não se torne obsoleto. São exemplos de inovações tecnológicas: as melhorias significativas e continuas em aparelhos smartphone e o uso da internet para expandir um negócio de forma online. Por fim, a inovação comum trata de inovações incrementais ou melhorias contínuas em produtos, processos ou serviços já existentes. Apesar de serem o tipo de inovação menos exclusivo, se manter competitivo no mercado seria impossível sem ela. As inovações comuns incluem: melhorias incrementais no design de um produto e busca por otimização em processos. Cada uma das inovações trazem impactos de diferentes tamanhos e maneiras para mundo. Enquanto a inovação revolucionária molda o futuro, as inovações tecnógicas e comuns oferecem melhorias incrementais e fundamentais para o avanço e funcionamento da sociedade.",
-            "image": null
+            "image": "Img_perguntas/Empren1.png"
           },
           {
             "question": "Levando em consideração o texto acima, apresente como o empreendedor ao realizar a análise do contexto para seu “novo negócio” faz uso das 5 Forças Competitivas para analisar o ambiente e identificar fatores de competitividade.",
@@ -4040,7 +4040,7 @@
               }
             ],
             "answer": "A análise qualitativa busca priorizar os riscos individuais do projeto com foco na análise conjunta da probabilidade de ocorrência e impacto dos riscos sobre os objetivos do projeto.",
-            "image": null
+            "image": "Img_perguntas/GPS1.png"
           },
           {
             "question": "Uma comunicação eficaz dentro de uma equipe de desenvolvimento de software é essencial para garantir que o projeto seja entregue com qualidade e dentro do prazo. Qual das alternativas abaixo representa um impacto negativo da falta de comunicação durante o desenvolvimento de um software?   ",
