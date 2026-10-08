@@ -3,4 +3,5 @@ node_modules/
 .DS_Store
 *.log
 Simulador_ADS.zip
+**/**/package-lock.json
 
